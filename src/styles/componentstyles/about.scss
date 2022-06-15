@@ -1,0 +1,53 @@
+.main-about {
+    @include flex-row-center(100%, 85vh, center, center);
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0);
+    gap: 2rem;
+
+    @include mobile {
+        flex-direction: column;
+        height: auto;
+        padding: 0.2rem;
+    }
+
+    .main-aboutImage {
+        width: 45vw;
+        height: 65%;
+        margin-bottom: 5rem;
+
+        @include mobile {
+            height: auto;
+            width: auto;
+            padding: 2rem;
+        }
+        img {
+            box-shadow: rgba(46, 240, 104, 0.4) -5px 5px, rgba(85, 240, 46, 0.3) -10px 10px, rgba(21, 138, 109, 0.2) -15px 15px, rgba(46, 240, 224, 0.1) -20px 20px, rgba(46, 240, 240, 0.05) -25px 25px;
+        }
+    }
+
+    .main-aboutDesc {
+        @include flex-column-center(50vw, 70%, center, flex-start);
+        background-image: linear-gradient(to left top, #00ff94, #00c983, #18966c, #276451, #2b2936);
+        padding: 2rem;
+        gap: 1rem;
+        color: white;
+
+        @include mobile {
+            width: 100%;
+        }
+        h2 {
+            font-family: $fontFamily;
+        }
+        h6 {
+            letter-spacing: 0.08rem;
+            word-spacing: 0.1rem;
+            text-align: justify;
+        }
+
+        button {
+            @include btn {
+                color: #18966c;
+            }
+        }
+    }
+}

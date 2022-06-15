@@ -1,0 +1,201 @@
+.main-home {
+    @include flex-row-center(auto, calc(100vh - 64px), center, strech);
+    background: linear-gradient(to top left, #163a31 0%, #11b68e 78.79%, #05e5af 100%), no-repeat;
+
+    @include mobile {
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 0.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .main-title {
+        @include flex-column-center(auto, auto, center, flex-start);
+
+        @include mobile {
+            z-index: 2;
+        }
+
+        .header {
+            width: 50rem;
+            text-transform: capitalize;
+            color: white;
+
+            @include mobile {
+                width: auto;
+            }
+            * {
+                font-family: "Work Sans", sans-serif !important;
+                @include mobile {
+                    font-size: 5rem;
+                }
+            }
+            span {
+                display: inline-block;
+            }
+            .spanText {
+                color: $greenQueen;
+            }
+        }
+
+        .subheader {
+            color: $silkWhite;
+        }
+        .findBtn {
+            margin-top: 1rem;
+            @include btn;
+        }
+    }
+    .main-homeImg {
+        @include flex-row-center(50rem, auto, center, center);
+
+        @include mobile {
+            position: absolute;
+            width: auto;
+            opacity: 0.5;
+        }
+
+        .homeImage {
+            @include mobile {
+                height: auto;
+            }
+        }
+    }
+}
+
+.main-facts {
+    background: url("../../assets/factImg.svg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+
+    @include mobile {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .main-fact-img {
+        @include flex-row-center(55vw, auto, center, center);
+        padding: 8rem;
+
+        @include mobile {
+            width: 100%;
+            padding: 0%;
+        }
+    }
+
+    .main-facts-list {
+        @include flex-column-center(45vw, auto, center, center);
+
+        @include mobile {
+            width: auto;
+            margin-top: 1rem;
+        }
+        h4 {
+            font-family: "Allura", cursive !important;
+            font-size: 4rem;
+            font-weight: 500;
+
+            @include mobile {
+                font-size: 2.5rem;
+            }
+        }
+        .factList {
+            display: block;
+            height: 30%;
+            line-height: 2.5rem;
+            letter-spacing: 0.05rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.main-topSearched {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .topSearchedHeader {
+        text-align: left;
+        text-transform: uppercase;
+        border: 1px solid $greenQueen;
+        background-color: $searchGreen;
+        border-radius: 5px;
+        width: fit-content;
+        padding: 1rem;
+
+        @include mobile {
+            padding: 0.3rem;
+        }
+    }
+
+    .main-topSearched-card {
+        @include flex-row-center(80%, auto, center, center);
+        margin: auto;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        @include mobile {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        .topSearched-card {
+            @include flex-column-center(auto, auto, center, flex-start);
+            border-radius: 10px 10px 0 0;
+
+            @include mobile {
+                width: 11rem;
+                height: 18rem;
+            }
+
+            img {
+                border-radius: 10px 10px 0 0;
+                height: 25rem;
+
+                @include mobile {
+                    height: 14rem;
+                }
+            }
+            h6 {
+                background-color: black;
+                color: $silkWhite;
+                width: 100%;
+                height: 4rem;
+                padding: 1rem;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                border-radius: 0 0 10px 10px;
+
+                @include mobile {
+                    height: auto;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.topBtn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50% !important;
+    background-color: $greenSeaweed;
+    color: $searchGreen;
+    border: none;
+    font-size: 0.4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    transition: all 1s ease-in-out;
+
+    &:hover {
+        color: $greenSeaweed;
+        background-color: $searchGreen;
+        border: 0.1px solid $greenSeaweed;
+    }
+}

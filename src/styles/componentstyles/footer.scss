@@ -1,0 +1,35 @@
+.main-footer {
+    display: flex;
+    justify-content: space-evenly;
+    color: $greenQueen;
+    background-color: #272626;
+    padding: 5rem;
+    margin-top: 1rem;
+
+    @include mobile {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .main-footer-logo,
+    .main-footer-icon {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .main-footer-logo {
+        margin-top: 1.2rem;
+    }
+    .main-footer-social,
+    .main-footer-help,
+    .main-footer-about,
+    .main-footer-legal {
+        padding: 1rem;
+    }
+
+    .main-footer-social {
+        @include mobile {
+            order: 2;
+        }
+    }
+}

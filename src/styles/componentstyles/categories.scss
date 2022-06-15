@@ -1,0 +1,270 @@
+//serachinputcomponent
+.main-searchbar {
+    @include flex-row-center(80%, 3rem, center, center);
+    border-radius: 5px;
+    margin: 0% 10%;
+    margin-top: 1rem;
+    box-shadow: 2px 3px 3px rgb(211, 211, 211);
+    background-color: $silkWhite;
+    padding: 0rem 0.5rem;
+
+    &:focus,
+    &:focus-within {
+        outline: 0.1px solid rgb(211, 211, 211);
+    }
+
+    .searchbarinput {
+        width: 100%;
+        height: 3rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        font-size: 1.2rem;
+        border: none;
+        cursor: pointer;
+        &:focus,
+        &:focus-within {
+            outline: none;
+        }
+    }
+
+    .searchicon,
+    .addicon {
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: rgb(209, 209, 209);
+    }
+    .addicon {
+        padding-left: 1rem;
+    }
+}
+
+//singlecardcomponent
+
+.main-outer-card {
+    @include flex-row-center(80%, auto, flex-start, center);
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+
+    @include mobile {
+        width: auto;
+        row-gap: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .main-card {
+        @include flex-column-center(25vw, 28rem, flex-start, stretch);
+        color: $silkWhite;
+        border-radius: 10px;
+        box-shadow: 2px 3px 5px 3px rgb(214, 214, 214);
+        transition: all 0.3s ease-out;
+
+        @include mobile {
+            margin: auto;
+            width: 40vw;
+            height: 15rem;
+            border-radius: 2px;
+        }
+        @include mid-laptop {
+            width: 19vw;
+        }
+
+        @include large-laptop {
+            width: 15vw;
+        }
+        .cardimg,
+        .cardDesc {
+            width: inherit;
+            height: 25rem;
+
+            @include mobile {
+                height: 15rem;
+            }
+
+            img {
+                border-radius: 10px 10px 0px 0px;
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+            }
+        }
+
+        .cardDesc {
+            color: black;
+            padding: 1.2rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+            @include mobile {
+                overflow: hidden;
+                display: inline-block;
+                text-overflow: ellipsis;
+                margin: 0 0 1rem 0;
+            }
+        }
+        .cardFooter {
+            @include flex-row-center(auto, 3rem, space-between, center);
+            border-radius: 0px 0px 10px 10px;
+            background-color: black;
+            padding: 0 1.5rem;
+
+            @include mobile {
+                padding: 0 0.3rem;
+                border-radius: 0px 0px 5px 5px;
+            }
+
+            .cardCaption {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(0.99);
+        }
+    }
+}
+
+.main-gobackBtn {
+    @include flex-row-center(80%, auto, flex-start, stretch);
+    margin: 0 auto;
+    margin-top: 1rem;
+    .gobackBtn {
+        background-color: #dffff7;
+        color: #00644b;
+
+        &:hover {
+            color: #dffff7;
+            background-color: #00644b;
+        }
+    }
+}
+
+.recipeSubheader {
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 0.2rem;
+}
+//prepdetailscomponent
+.main-prep {
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @include mobile {
+        width: auto;
+    }
+
+    .main-prep-1 {
+        @include flex-row-center(auto, auto, space-between, center);
+        padding: 1rem;
+
+        @include mobile {
+            flex-direction: column;
+        }
+        @include laptop {
+            flex-direction: column;
+        }
+
+        .main-prep-thumbnail {
+            width: 20rem;
+            height: 23rem;
+            border-radius: 10px;
+
+            @include mobile {
+                width: auto;
+            }
+            @include laptop {
+                width: auto;
+            }
+            .prepCardImage {
+                width: inherit;
+                height: inherit;
+                border-radius: 10px;
+                box-shadow: 6px 6px 12px 0px lightgrey;
+            }
+        }
+
+        .main-prep-details {
+            width: 60%;
+
+            @include mobile {
+                width: auto;
+            }
+            @include laptop {
+                width: auto;
+            }
+
+            .main-prepHeaders {
+                display: flex;
+                justify-content: flex-start;
+                gap: 10rem;
+                padding: 0.5rem;
+
+                @include mobile {
+                    gap: 0;
+                    flex-direction: column;
+                }
+                .prepHeaders {
+                    font-family: "Poppins";
+                    span {
+                        font-weight: normal;
+                    }
+                }
+            }
+
+            .main-prepInstructions {
+                @include flex-column-center(auto, auto, flex-start, stretch);
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    .main-prep-2 {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+
+        .main-ingredientsList {
+            @include flex-column-center(40rem, auto, flex-start, stretch);
+            margin: auto;
+            padding: 1.2rem;
+            box-shadow: inset 3px 8px 47px 4px #edfff9;
+
+            @include mobile {
+                width: auto;
+            }
+
+            .ingredientsListHeader {
+                padding-left: 1.2rem;
+            }
+            .ingredientsList {
+                @include flex-column-center(auto, auto, flex-start, flex-start);
+                text-transform: capitalize;
+                word-spacing: 0.2rem;
+                white-space: none;
+
+                li:nth-child(odd) {
+                    background-color: #e8fff9;
+                    color: rgb(0, 0, 0);
+                }
+                li:nth-child(even) {
+                    background-color: #c3fae9;
+                }
+            }
+        }
+    }
+}

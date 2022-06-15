@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Poppins&family=Work+Sans:wght@600&display=swap");
+
+@import "./breakpoints";
+@import "./variable";
+@import "./mixin";
+
+@import "./componentstyles/navbar";
+@import "./componentstyles/home";
+@import "./componentstyles/logo";
+@import "./componentstyles/categories";
+@import "./componentstyles/footer";
+@import "./componentstyles/signinSignup";
+@import "./componentstyles/about";

@@ -1,0 +1,21 @@
+.inactive {
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    font-family: $fontFamily;
+    padding: 0.5rem;
+    color: $silkWhite;
+}
+.active {
+    background-color: $greenSeaweed;
+    border: 0.2px solid $greenQueen;
+    font-family: $fontFamily;
+    border-radius: 5px;
+    color: $greenQueen;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem;
+}
