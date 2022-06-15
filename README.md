@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-This git repository does not include any node module or packages. Hence when you clone this repository please folow the below neccessary steps:
+This git repository does not include any node module or packages. Hence when you clone this repository please follow the below neccessary steps:
 
 1. run command `npm install `
 2. now run `npm start`
