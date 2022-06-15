@@ -1,5 +1,5 @@
 .main-home {
-    @include flex-row-center(auto, calc(100vh - 64px), center, strech);
+    @include flex-row-center(auto, calc(100vh - 64px), center, stretch);
     background: linear-gradient(to top left, #163a31 0%, #11b68e 78.79%, #05e5af 100%), no-repeat;
 
     @include mobile {
